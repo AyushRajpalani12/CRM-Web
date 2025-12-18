@@ -7,7 +7,7 @@ import Fourth from "./Fourth";
 import Fifth from "./Fifth";
 import Sixth from "./Sixth";
 import Footer from "./Footer";
-import JewelleryPage from "./JewelllaryPage";
+// import JewelleryPage from "./JewelllaryPage";
 
 function Home() {
   return (
@@ -21,7 +21,7 @@ function Home() {
       <Sixth />
       {/* <Seventh /> */}
       <Footer />
-      <JewelleryPage/>
+      {/* <JewelleryPage/> */}
     </>
   );
 }
