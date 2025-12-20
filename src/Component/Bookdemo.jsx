@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Play, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import video from "../assets/video.mp4"
+
+// Remove video import if you're using YouTube embed
+import video from "../assets/video.mp4" // Remove this if using YouTube
 
 // Import your logo - update the path as needed
-import logo from "../assets/main2.png";
+// import logo from "../assets/main2.png"; // Remove if not used
 
 export default function BookDemoForm() {
   const [formData, setFormData] = useState({
@@ -48,12 +50,10 @@ export default function BookDemoForm() {
 
   const areasOfInterest = [
     "Customer Management & CRM",
-  
-    "Automation ",
+    "Automation",
     "Real-Estate",
-   
     "Jewellary Business",
-     "Other",
+    "Other",
   ];
 
   const handleChange = (e) => {
@@ -92,6 +92,7 @@ export default function BookDemoForm() {
       console.log("Form submitted:", formData);
       
       // Here you would typically make an API call
+      // For demonstration, we'll just log it
       // setTimeout(() => setIsSubmitted(false), 5000); // Reset after 5 seconds
     }
   };
@@ -114,8 +115,10 @@ export default function BookDemoForm() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Navbar */}
-     
+      {/* Navbar - Add your navbar component here if needed */}
+      {/* <nav className="bg-white shadow-sm">
+        Your navbar content
+      </nav> */}
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12">
@@ -234,24 +237,37 @@ export default function BookDemoForm() {
             {/* Gap between content and video */}
             <div className="mb-8 sm:mb-10"></div>
 
-            {/* Below: Playable YouTube Video */}
+            {/* Below: Playable YouTube Video - FIXED VERSION */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl mb-8">
               <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl">
+                {/* Option 1: Use YouTube embed URL directly */}
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
-                  src={video}
+                  src= {video}// Replace with your actual YouTube video ID
                   title="CRM Platform Demo - How it Works"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
+                
+                {/* Option 2: If you have a local video file, use this instead: */}
+                {/* 
+                <video 
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  controls
+                  poster="path-to-your-poster-image.jpg" // Optional: add a poster image
+                >
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                */}
               </div>
               
               {/* Video title overlay */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 sm:p-6">
                 <div className="text-white">
                   <p className="font-medium text-sm sm:text-lg">CRM Platform Demo</p>
-                  {/* <p className="text-xs sm:text-sm text-white/70">See key features & benefits in action (3:15)</p> */}
+                  <p className="text-xs sm:text-sm text-white/70">See key features & benefits in action</p>
                 </div>
               </div>
               
@@ -259,7 +275,7 @@ export default function BookDemoForm() {
               <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
                 <div className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-black/50 backdrop-blur-sm rounded-full">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 rounded-full animate-pulse"></div>
-                  <span className="text-white text-xs sm:text-sm font-medium">LIVE DEMO</span>
+                  <span className="text-white text-xs sm:text-sm font-medium">DEMO VIDEO</span>
                 </div>
               </div>
             </div>
@@ -278,7 +294,7 @@ export default function BookDemoForm() {
                   <p className="text-xs sm:text-sm text-gray-600 mt-2">- Retail Store Owner</p>
                 </div>
                 <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
-                  <p className="text-sm sm:text-text-base text-gray-700 italic">
+                  <p className="text-sm sm:text-base text-gray-700 italic">
                     "The AI insights have been game-changing for our service business. Highly recommend the demo!"
                   </p>
                   <p className="text-xs sm:text-sm text-gray-600 mt-2">- Service Business CEO</p>
@@ -478,9 +494,9 @@ export default function BookDemoForm() {
                       />
                       <label htmlFor="terms" className="text-xs sm:text-sm text-gray-700">
                         By supplying my contact information, I accept the{" "}
-                        <a href="#" className="text-blue-600 hover:underline font-bold">Terms of Service</a>{" "}
+                        <a href="/terms" className="text-blue-600 hover:underline font-bold">Terms of Service</a>{" "}
                         and{" "}
-                        <a href="#" className="text-blue-600 hover:underline font-bold">Privacy Notice</a>.
+                        <a href="/privacy" className="text-blue-600 hover:underline font-bold">Privacy Notice</a>.
                       </label>
                     </div>
                     {errors.terms && (

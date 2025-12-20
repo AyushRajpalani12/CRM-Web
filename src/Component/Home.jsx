@@ -20,7 +20,7 @@ function Home() {
       <Fifth />
       <Sixth />
       {/* <Seventh /> */}
-      <Footer />
+   
       {/* <JewelleryPage/> */}
     </>
   );

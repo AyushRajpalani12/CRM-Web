@@ -10,13 +10,8 @@ import {
   HeartPulse,
   Receipt,
   Boxes,
-  Zap,
-  Target,
   ArrowRight,
-  BarChart3,
-  Cloud,
-  Cpu,
-  Shield
+  Cpu
 } from "lucide-react";
 
 const modules = [
@@ -26,7 +21,8 @@ const modules = [
     icon: Brain,
     gradient: "from-indigo-500 via-purple-500 to-purple-600",
     stats: "85% Lead Conversion",
-    features: ["AI Lead Scoring", "Customer 360 View", "Automated Follow-ups", "Sales Pipeline"]
+    features: ["AI Lead Scoring", "Customer 360 View", "Automated Follow-ups", "Sales Pipeline"],
+    Link: "/nexacrm"
   },
   {
     name: "NexaHR",
@@ -34,23 +30,26 @@ const modules = [
     icon: Users,
     gradient: "from-pink-500 via-rose-500 to-pink-600",
     stats: "40% HR Time Saved",
-    features: ["Automated Payroll", "Attendance Tracking", "Performance Reviews", "Leave Management"]
+    features: ["Automated Payroll", "Attendance Tracking", "Performance Reviews", "Leave Management"],
+    Link: "/nexahr"
   },
   {
-    name: "NexaOps",
+    name: "Nexaops",
     desc: "Daily business operations, workflow automation, approval systems, and process management.",
     icon: Settings,
     gradient: "from-teal-500 via-emerald-500 to-green-500",
     stats: "60% Efficiency Gain",
-    features: ["Workflow Automation", "Approval Systems", "Process Tracking", "Task Management"]
+    features: ["Workflow Automation", "Approval Systems", "Process Tracking", "Task Management"],
+    Link: "/nexaops"
   },
   {
-    name: "NexaPulse",
+    name: "Nexapulse",
     desc: "Advanced analytics, real-time business health monitoring, and actionable insights dashboard.",
     icon: Activity,
     gradient: "from-cyan-500 via-blue-500 to-cyan-600",
     stats: "50% Faster Decisions",
-    features: ["Real-time Analytics", "Business Health", "Predictive Insights", "Custom Reports"]
+    features: ["Real-time Analytics", "Business Health", "Predictive Insights", "Custom Reports"],
+    Link: "/nexapulse"
   },
   {
     name: "NexaReach",
@@ -58,7 +57,8 @@ const modules = [
     icon: Megaphone,
     gradient: "from-violet-500 via-indigo-500 to-purple-500",
     stats: "3x Engagement",
-    features: ["WhatsApp Marketing", "Email Campaigns", "Social Media", "Lead Nurturing"]
+    features: ["WhatsApp Marketing", "Email Campaigns", "Social Media", "Lead Nurturing"],
+    Link: "/nexareach"
   },
   {
     name: "NexaCare",
@@ -66,7 +66,8 @@ const modules = [
     icon: HeartPulse,
     gradient: "from-red-500 via-pink-500 to-rose-500",
     stats: "95% Satisfaction",
-    features: ["Ticketing System", "Live Chat", "Knowledge Base", "Customer Success"]
+    features: ["Ticketing System", "Live Chat", "Knowledge Base", "Customer Success"],
+    Link: "/nexacare"
   },
   {
     name: "NexaBill",
@@ -74,7 +75,8 @@ const modules = [
     icon: Receipt,
     gradient: "from-orange-500 via-amber-500 to-yellow-500",
     stats: "2x Faster Invoicing",
-    features: ["Automated Invoicing", "Payment Processing", "Tax Calculation", "Expense Tracking"]
+    features: ["Automated Invoicing", "Payment Processing", "Tax Calculation", "Expense Tracking"],
+    Link: "/nexabill"
   },
   {
     name: "NexaStock",
@@ -82,8 +84,9 @@ const modules = [
     icon: Boxes,
     gradient: "from-green-500 via-lime-500 to-emerald-500",
     stats: "30% Stock Optimized",
-    features: ["Inventory Tracking", "Vendor Management", "Stock Alerts", "Order Management"]
-  },
+    features: ["Inventory Tracking", "Vendor Management", "Stock Alerts", "Order Management"],
+    Link: "/nexastock"
+  }
 ];
 
 export default function ModulesOverview() {
@@ -152,9 +155,12 @@ export default function ModulesOverview() {
                   ))}
                 </div>
 
-                <button className="w-full py-3 sm:py-3.5 bg-gray-50 border border-gray-300 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-100">
-                  Explore Module <ArrowRight className="w-4 h-4" />
-                </button>
+                {/* Explore Button with Link */}
+                <Link to={mod.Link} className="block">
+                  <button className="w-full py-3 sm:py-3.5 bg-gray-50 border border-gray-300 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-100 transition">
+                    Explore Module <ArrowRight className="w-4 h-4" />
+                  </button>
+                </Link>
               </motion.div>
             );
           })}
