@@ -18,6 +18,7 @@ import CRM from "./assets/Features/Crm"
 import Schedule from "./assets/Features/Scheduling"
 import Nexareach from "./assets/Module/Nexareach"
 import NexaCare from './assets/Module/Nexacare';
+import NexaBill from './assets/Module/NexaBill';
 function App() {
  
 
@@ -38,7 +39,7 @@ function App() {
          <Route path="/nexaops" element={<NexaOps/>} />
                <Route path="/nexapulse" element={<Nexapulse/>} />
                               <Route path="/nexacare" element={<NexaCare/>} />
-
+                              <Route path="/nexabill" element={<NexaBill/>} />
 
                               <Route path="/features/crm" element={<CRM/>} />
                                                             <Route path="/features/scheduling" element={<Schedule/>} />

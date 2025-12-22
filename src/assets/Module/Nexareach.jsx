@@ -400,68 +400,7 @@ const Header = () => {
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-3">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h2 className="text-xl font-bold text-white">Nexa Reach</h2>
-                <p className="text-sm">CRM + Multi-Business Platform</p>
-              </div>
-            </div>
-            <p className="text-gray-400">
-              Unifying customer relationship management with multi-business operations for the modern enterprise.
-            </p>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-bold text-white mb-6">Product</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="hover:text-white transition">Features</a></li>
-              <li><a href="#" className="hover:text-white transition">Industries</a></li>
-              <li><a href="#" className="hover:text-white transition">How It Works</a></li>
-              <li><a href="#" className="hover:text-white transition">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition">API Documentation</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-bold text-white mb-6">Resources</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="hover:text-white transition">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition">Case Studies</a></li>
-              <li><a href="#" className="hover:text-white transition">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition">Community</a></li>
-              <li><a href="#" className="hover:text-white transition">Webinars</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-bold text-white mb-6">Contact</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center">
-                <Phone className="w-4 h-4 mr-3" />
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center">
-                <Mail className="w-4 h-4 mr-3" />
-                <span>sales@nexareach.com</span>
-              </li>
-              <li className="flex items-center">
-                <Globe className="w-4 h-4 mr-3" />
-                <span>24/7 Global Support</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Nexa Reach. All rights reserved. | Privacy Policy | Terms of Service</p>
-        </div>
-      </div>
+ 
     </footer>
   );
 };
