@@ -16,6 +16,8 @@ import NexaOps from './assets/Module//Nexaops';
 import Nexapulse from "./assets/Module/Nexapulse"
 import CRM from "./assets/Features/Crm"
 import Schedule from "./assets/Features/Scheduling"
+import Nexareach from "./assets/Module/Nexareach"
+import NexaCare from './assets/Module/Nexacare';
 function App() {
  
 
@@ -32,8 +34,12 @@ function App() {
    <Route path="/automobile" element={<AutomobilePage/>} />
     <Route path="/nexacrm" element={<NexaCRMPage/>} />
      <Route path="/nexahr" element={<NexaHRcrm/>} />
+          <Route path="/nexareach" element={<Nexareach/>} />
          <Route path="/nexaops" element={<NexaOps/>} />
                <Route path="/nexapulse" element={<Nexapulse/>} />
+                              <Route path="/nexacare" element={<NexaCare/>} />
+
+
                               <Route path="/features/crm" element={<CRM/>} />
                                                             <Route path="/features/scheduling" element={<Schedule/>} />
 
